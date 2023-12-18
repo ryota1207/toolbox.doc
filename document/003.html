@@ -448,7 +448,7 @@
     <div style="width: 90%; margin: auto;max-width: 1200px;">
       <p class="top_1">- 開発スケジュール -</span></p>
 
-        <div style="width: 70%;margin: auto;">
+        <div style="width: 70%;margin: auto;" class="contents">
           <div class="flow_design03">
             <ul class="flow03">
               <li>
@@ -482,6 +482,23 @@
 
 
 <script>
+
+    // 非表示処理
+    const menuBtn = document.querySelector(".menu-btn");
+    const contents = document.querySelector(".contents");
+
+    menuBtn.addEventListener("change", function () {
+      if (menuBtn.checked) {
+        contents.style.display = 'none';
+
+
+      } else {
+
+        contents.style.display = 'block';
+
+      }
+    });
+
   window.addEventListener('beforeunload', function (e) {
       const menuBtn = document.querySelector(".menu-btn");
       if (menuBtn.checked) {
